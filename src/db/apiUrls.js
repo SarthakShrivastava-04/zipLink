@@ -59,7 +59,7 @@ export async function getLongUrl(id) {
   console.log("ndn")
   // console.log(process.env.REACT_APP_BASE_URL)
   console.log("dbb")
-  const shortUrl = `https://ziplink-444.netlify.app/${id}`;
+  const shortUrl = `ziplink-444.netlify.app/${id}`;
   console.log("check")
   console.log(shortUrl)
   let {data: matchedUrl, error} = await supabase

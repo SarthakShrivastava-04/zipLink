@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BarLoader } from "react-spinners";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Filter } from "lucide-react";
 import useFetch from "@/hooks/use-fetch";
