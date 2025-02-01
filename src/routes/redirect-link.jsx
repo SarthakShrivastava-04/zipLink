@@ -21,6 +21,9 @@ function RedirectLink() {
   useEffect(() => {
     fn();
   }, []);
+
+  console.log(data)
+
   
   useEffect(() => {
    if(!loading && data){

@@ -25,9 +25,9 @@ export async function deleteUrl(id) {
 
 export async function createUrl({title, longUrl, customUrl, user_id}, qrcode) {
   const random6 = Math.random().toString(36).slice(2,8);
-  const short_url = `https://www.zipLink.in/${random6}`;
+  const short_url = `https://ziplink-444.netlify.app/${random6}`;
   const fileName = `qr-${random6}`
-  const custom_url = customUrl? `https://www.zipLink.in/${customUrl}` : ""; 
+  const custom_url = customUrl? `https://ziplink-444.netlify.app/${customUrl}` : ""; 
 
   const {error: storageError} = await supabase.storage.from("qrs").upload(fileName, qrcode);
   if(storageError) throw new Error(storageError.message);
@@ -56,7 +56,12 @@ export async function createUrl({title, longUrl, customUrl, user_id}, qrcode) {
 }
 
 export async function getLongUrl(id) {
-  const shortUrl = `https://www.zipLink.in/${id}`;
+  console.log("ndn")
+  // console.log(process.env.REACT_APP_BASE_URL)
+  console.log("dbb")
+  const shortUrl = `https://ziplink-444.netlify.app/${id}`;
+  console.log("check")
+  console.log(shortUrl)
   let {data: matchedUrl, error} = await supabase
   .from("urls")
   .select("id, original_url")

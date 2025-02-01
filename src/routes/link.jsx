@@ -5,13 +5,11 @@ import { deleteUrl, getUrl } from '@/db/apiUrls';
 import useFetch from '@/hooks/use-fetch';
 import { Copy, Download, LinkIcon, Trash } from 'lucide-react';
 import React, { useContext, useEffect } from 'react'
-import { useNavigate, useParams, Navigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { BeatLoader, BarLoader } from 'react-spinners';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
